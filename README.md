@@ -45,7 +45,7 @@ docker-compose.yml
 ![Скриншот изобращения процесса выполнения задания](https://github.com/Mazaich/Docker-Compose/blob/main/Screenshot_2025-12-16_02_17_35.png?raw=true)
 ![Скриншот изобращения процесса выполнения задания](https://github.com/Mazaich/Docker-Compose/blob/main/Screenshot_2025-12-16_02_22_53.png?raw=true)
 "Found orphan containers" - Docker Compose обнаружил "осиротевшие" контейнеры (task5-portainer-1), которые были созданы предыдущими запусками Compose, но не указаны в текущем файле конфигурации (docker-compose.yaml).
-Причина: Вы удалили файл compose.yaml, в котором был описан сервис portainer. Теперь остался только docker-compose.yaml, который описывает только сервис registry. 
+Причина: был удаден  файл compose.yaml, в котором был описан сервис portainer. Теперь остался только docker-compose.yaml, который описывает только сервис registry. 
 Контейнер task5-portainer-1 стал "осиротевшим", так как он не принадлежит ни к одному сервису в текущем compose-файле.
 Docker Compose предлагает запустить команду с флагом --remove-orphans, чтобы автоматически удалить эти контейнеры.
 
